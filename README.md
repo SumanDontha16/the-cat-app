@@ -8,16 +8,19 @@ This App is to demonstration the following features:
 - You should see a score on each cat based on the votes
 
 ## Home Page
-![screencapture-localhost-3000-2024-12-28-15_47_42](https://github.com/user-attachments/assets/88509256-4996-4d87-8f8b-97129b45de40)
+![screencapture-localhost-3000-2024-12-28-16_15_44](https://github.com/user-attachments/assets/50f23df6-3bd1-4751-bbdd-e55c69a61232)
 
 ## Upload Page
-![screencapture-localhost-3000-upload-2024-12-28-15_48_04](https://github.com/user-attachments/assets/ed8e3277-3c93-4a8c-8cff-60f7b9b2543c)
+![screencapture-localhost-3000-upload-2024-12-28-16_16_09](https://github.com/user-attachments/assets/b8c9a4bf-9dc9-4abb-baff-890ef15ebd2d)
 
 ## Loading Page
 ![Screenshot 2024-12-28 at 01 43 19](https://github.com/user-attachments/assets/7022c5a6-b58e-417d-a8f6-97d881388804)
 
 ## Error Page
 ![Screenshot 2024-12-26 at 22 43 43](https://github.com/user-attachments/assets/c4451245-471e-4931-ab26-06eab86af5a8)
+
+# Mobile view screens
+![screencapture-localhost-3000-2024-12-28-16_16_57](https://github.com/user-attachments/assets/a3b7dbcf-e2fa-4f91-9e1e-13aa348b3835)
 
 # Getting Started with Create React App
 
