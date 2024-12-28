@@ -2,11 +2,11 @@ import React, { useEffect, useState, useMemo } from 'react';
 import { useGetCatImagesQuery, useAddFavoriteMutation, useRemoveFavoriteMutation, useVoteCatImageMutation, useGetVotesQuery } from '../../api/catApi';
 import { useDispatch, useSelector } from 'react-redux';
 import { favoritesSelector, updateFavorites, updateVotes, votesSelector } from '../../features/catSlice';
-import { Pagination } from './Pagination';
 import CatCard from '../CatCard/CatCard';
-import Skeleton from './Skeleton';
 import { paginate } from '../../utils/paginate';
-import Error from './Error';
+import Skeleton from '../../utils/Skeleton';
+import Error from '../../utils/Error';
+import { Pagination } from '../Pagination/Pagination';
 
 const CatGallery = () => {
     const dispatch = useDispatch();
