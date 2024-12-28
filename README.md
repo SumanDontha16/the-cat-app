@@ -7,6 +7,18 @@ This App is to demonstration the following features:
 - You should be able to vote a cat up or down
 - You should see a score on each cat based on the votes
 
+## Home Page
+![screencapture-localhost-3000-2024-12-28-15_47_42](https://github.com/user-attachments/assets/88509256-4996-4d87-8f8b-97129b45de40)
+
+## Upload Page
+![screencapture-localhost-3000-upload-2024-12-28-15_48_04](https://github.com/user-attachments/assets/ed8e3277-3c93-4a8c-8cff-60f7b9b2543c)
+
+## Loading Page
+![Screenshot 2024-12-28 at 01 43 19](https://github.com/user-attachments/assets/7022c5a6-b58e-417d-a8f6-97d881388804)
+
+## Error Page
+![Screenshot 2024-12-26 at 22 43 43](https://github.com/user-attachments/assets/c4451245-471e-4931-ab26-06eab86af5a8)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
