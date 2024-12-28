@@ -6,15 +6,14 @@ import { Pagination } from './Pagination';
 import CatCard from '../CatCard/CatCard';
 import Skeleton from './Skeleton';
 import { paginate } from '../../utils/paginate';
+import Error from './Error';
 
 const CatGallery = () => {
     const dispatch = useDispatch();
     const [page, setPage] = useState(1);
     const [isLoading, setIsLoading] = useState(true); 
-    const { data: catImages, isError } = useGetCatImagesQuery(undefined, { 
-        pollingInterval: 0,
-    }); 
-    const { data: voteData } = useGetVotesQuery();
+    const { data: catImages, error: catImagesError } = useGetCatImagesQuery(undefined); 
+    const { data: voteData, error: voteDataError } = useGetVotesQuery();
 
     const cats = useMemo(() => catImages || [], [catImages]);
     const pageCount = useMemo(() => Math.ceil((cats?.length || 0) / 8) || 1, [cats]);
@@ -56,7 +55,8 @@ const CatGallery = () => {
 
 
     if (isLoading) return <Skeleton />;
-    if (isError) return <div>Error: {isError.message}</div>;
+    if (catImagesError) return <Error statusCode={catImagesError.status} message={catImagesError.data.message} />;
+    if (voteDataError) return <Error statusCode={voteDataError.status} message={voteDataError.data.message} />;
 
     const handleVote = async (id, vote) => {
         await voteCatImage({ imageId: id, vote });
