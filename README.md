@@ -1,3 +1,12 @@
+# The Cat App
+This App is to demonstration the following features:
+
+- You should be able to upload a new cat image
+- You should be able to view the cat images you uploaded
+- You should be able to favourite and unfavourite a cat
+- You should be able to vote a cat up or down
+- You should see a score on each cat based on the votes
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
