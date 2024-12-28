@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useMemo } from 'react';
 import { useGetCatImagesQuery, useAddFavoriteMutation, useRemoveFavoriteMutation, useVoteCatImageMutation, useGetVotesQuery } from '../../api/catApi';
 import { useDispatch, useSelector } from 'react-redux';
-import { updateFavorites, updateVotes } from '../../features/catSlice';
+import { favoritesSelector, updateFavorites, updateVotes, votesSelector } from '../../features/catSlice';
 import { Pagination } from './Pagination';
 import CatCard from '../CatCard/CatCard';
 import Skeleton from './Skeleton';
@@ -19,8 +19,8 @@ const CatGallery = () => {
     const pageCount = useMemo(() => Math.ceil((cats?.length || 0) / 8) || 1, [cats]);
     const paginatedCats = useMemo(() => paginate(cats, 8, page), [cats, page]);
 
-    const favorites = useSelector((state) => state.cats.favorites);
-    const votes = useSelector((state) => state.cats.votes);
+    const favorites = useSelector(favoritesSelector);
+    const votes = useSelector(votesSelector);
 
     const [addFavorite] = useAddFavoriteMutation();
     const [removeFavorite] = useRemoveFavoriteMutation();

@@ -14,7 +14,7 @@ export const catsSlice = createSlice({
       state.catImages = action.payload;
     },
     addCatImage: (state, action) => {
-      state.catImages.push(action.payload); // Add new cat image to the array
+      state.catImages.push(action.payload); 
     },
     updateFavorites: (state, action) => {
       state.favorites = action.payload;
@@ -24,6 +24,9 @@ export const catsSlice = createSlice({
     },
   },
 });
+
+export const favoritesSelector = (state) => state.cats.favorites;
+export const votesSelector = (state) => state.cats.votes;
 
 export const { addCatImage, updateFavorites, updateVotes } = catsSlice.actions;
 export default catsSlice.reducer;
