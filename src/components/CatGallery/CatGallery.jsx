@@ -91,7 +91,9 @@ const CatGallery = () => {
                     ))}
                 </div>
             </main>
-            <Pagination page={page} pageCount={pageCount} onPageChange={setPage} />
+            {!isLoading && (
+                <Pagination page={page} pageCount={pageCount} onPageChange={setPage} />
+            )}
         </div>
     );
 };
