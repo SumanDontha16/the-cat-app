@@ -59,8 +59,12 @@ const CatGallery = () => {
     if (voteDataError) return <Error statusCode={voteDataError.status} message={voteDataError.data.message} />;
 
     const handleVote = async (id, vote) => {
+    try {
         await voteCatImage({ imageId: id, vote });
         dispatch(updateVotes({ [id]: (votes[id] || 0) + vote }));
+    } catch (error) {
+        console.error("Vote failed:", error);
+        }
     };
 
     const handleFavorite = async (id) => {
@@ -74,7 +78,7 @@ const CatGallery = () => {
     };
 
     return (
-        <div data-testid="cat-list" className="flex flex-col items-center space-y-6 p-6">
+        <div data-testid="cat-list" className="flex flex-col items-center space-y-6">
             <main>
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                     {paginatedCats.map((cat) => (

@@ -52,7 +52,7 @@ export const catApi = createApi({
     }),
     // Vote for a cat image
     voteCatImage: builder.mutation({
-      query: (imageId, vote) => ({
+      query: ({ imageId, vote }) => ({
         url: 'votes',
         method: 'POST',
         body: { image_id: imageId, value: vote },
